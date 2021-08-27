@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
     <link href="css/style.css" rel="stylesheet">
     <title>Cocktail Nation</title>
 </head>
@@ -33,7 +35,7 @@
     </nav>
 
     <!-- Showcase -->
-    <div class="p-5 my-5" id="showcase">
+    <div class="p-5 my-5 bg-dark" id="showcase">
         <div class="text-center banner-text ">
             <h1>Cocktail Nation</h1>
         </div>
@@ -47,21 +49,27 @@
     </section>
 
     <!-- About Us -->
-    <section class="text-light p-5 m5 text-center">
-        <h3 class="pb-3">About Us</h3>
-        <div class="row">
-            <div class="col-6">
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus rem esse pariatur suscipit blanditiis. Vero.</p>
-            </div>
-            <div class="col-6">
-                <div id="map"></div>
+    <section class="py-5 text-center text-light bg-dark" id="about">
+        <div class="container">
+            <h3 class="pb-3">About Us</h3>
+            <div class="row g-4 ">
+                <div class="col-6 ps-2">
+                    <p class="lead">Cocktail Nation is a project constructed to demonstrate the use of APIs on a website. The API that this website is getting its cocktail recipes from is <a href="https://www.thecocktaildb.com/api.php" class="text-light">TheCocktailAPI.</a> </p>
+                    <p class="lead">
+                        Cocktail Nation represents a make-believe liquor store that hosts a cocktail recipe finder to encourage customers to buy more supplies from their store.
+                    </p>
+                </div>
+                <div class="col-6 pe-2">
+                    <div id="map" style='width: 400px; height: 300px;'></div>
+                </div>
             </div>
         </div>
     </section>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
+
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoiamh1bnRsZXkiLCJhIjoiY2tzb20ydnZ4M3NidjJubzJ5a3prbXZuayJ9._brJxH7WB77ON5Xga13QRQ';
         var map = new mapboxgl.Map({
@@ -70,6 +78,10 @@
         center: [-71.060982, 42.35725],
         zoom: 18
         });
-    </script>
+        </script>
+
+    
+
+    <script src="js/app.js"></script>
 </body>
 </html>
