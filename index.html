@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <!-- MapBox -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-
+    <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <title>Cocktail Nation</title>
 </head>
 <body class="bg-dark">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
-        <div class="container">
-            <a href="#" class="navbar-brand">CN</a>
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand logo">CN</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
@@ -35,34 +40,48 @@
     </nav>
 
     <!-- Showcase -->
-    <div class="p-5 my-5 bg-dark" id="showcase">
+    <div class="p-5 bg-dark" id="showcase">
         <div class="text-center banner-text ">
-            <h1>Cocktail Nation</h1>
+            <h1 class="showcase-text">Cocktail Nation</h1>
         </div>
     </div>
 
     <!-- Cards -->
-    <section class="text-white bg-dark text-center">
+    <section class="text-white bg-dark text-center p-5" id="drinks">
         <h3>Welcome to our cocktail chooser</h3>
         <button class="btn-outline-light bg-dark my-3" type="button" onclick="getRandomCocktail(10);">10 Random Drinks!</button>
         <div class="row text-center px-sm-5" id="cocktail-cards"></div>
     </section>
 
     <!-- About Us -->
-    <section class="py-5 text-center text-light bg-dark" id="about">
+    <section class="p-5 text-center text-light bg-dark" id="about">
         <div class="container">
             <h3 class="pb-3">About Us</h3>
             <div class="row g-4 ">
-                <div class="col-6 ps-2">
+                <div class="col-md">
                     <p class="lead">Cocktail Nation is a project constructed to demonstrate the use of APIs on a website. The API that this website is getting its cocktail recipes from is <a href="https://www.thecocktaildb.com/api.php" class="text-light">TheCocktailAPI.</a> </p>
                     <p class="lead">
                         Cocktail Nation represents a make-believe liquor store that hosts a cocktail recipe finder to encourage customers to buy more supplies from their store.
                     </p>
                 </div>
-                <div class="col-6 pe-2">
-                    <div id="map" style='width: 400px; height: 300px;'></div>
+                <div class="col-md">
+                    <div id="map"></div>
                 </div>
             </div>
+        </div>
+        <div class="container ">
+            <h2 class="text-center my-4">Contact Info</h2>
+            <ul class="list-unstyled lead text-light ">
+                <li class="">
+                    <span class="fw-bold">Main Location</span> 50 Main St. Boston
+                </li>
+                <li class="">
+                    <span class="fw-bold">Call Us:</span> 1 (555)-555-5555
+                </li>
+                <li class="">
+                    <span class="fw-bold">Email:</span> CocktailNation@cn.com
+                </li>
+            </ul>
         </div>
     </section>
     <!-- Scripts -->
